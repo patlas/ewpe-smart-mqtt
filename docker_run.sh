@@ -1,4 +1,5 @@
-docker run -it \
+docker rm ewpe-smart-mqtt
+docker run  -it \
 --network="host" \
 -e "MQTT_SERVER=mqtt://127.0.0.1" \
 -e "MQTT_BASE_TOPIC=ewpe-smart" \
