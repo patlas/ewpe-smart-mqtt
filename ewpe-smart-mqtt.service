@@ -1,6 +1,6 @@
 [Unit]
 Description=EWPE smart mqtt service
-After=network.target
+After=network.target docker.service
 StartLimitIntervalSec=0
 [Service]
 Type=simple
