@@ -7,4 +7,4 @@ docker run  -it \
 -e "DEVICE_POLL_INTERVAL=5000" \
 -e "LOG_LEVEL=debug" \
 --name ewpe-smart-mqtt \
-ewpe-smart-mqtt
+demydiuk/ewpe-smart-mqtt:arm32v6
