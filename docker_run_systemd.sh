@@ -5,5 +5,5 @@ if [ ! "$(/usr/bin/docker ps -q -f name=ewpe-smart-mqtt)" ]; then
 		/usr/bin/docker rm ewpe-smart-mqtt 
 	fi
 
-	/usr/bin/docker run  -it --network="host" --name ewpe-smart-mqtt ewpe-smart-mqtt
+	/usr/bin/docker run --network="host" --name ewpe-smart-mqtt ewpe-smart-mqtt
 fi

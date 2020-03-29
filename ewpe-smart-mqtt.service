@@ -1,12 +1,14 @@
 [Unit]
 Description=EWPE smart mqtt service
 After=network.target docker.service
+Require=docker.service
 StartLimitIntervalSec=0
 [Service]
 Type=simple
 Restart=always
-RestartSec=3
-ExecStart=/bin/bash /home/pi/Repositories/smarthome/ewpe-smart-mqtt/docker_run.sh 
+RestartSec=30
+ExecStart=/bin/bash /home/pi/Repositories/smarthome/ewpe-smart-mqtt/docker_run_systemd.sh
+ExecStop=/usr/bin/docker stop -t 2 ewpe-smart-mqtt
 
 [Install]
 WantedBy=multi-user.target
