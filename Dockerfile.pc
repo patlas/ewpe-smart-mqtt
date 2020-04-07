@@ -1,4 +1,6 @@
-FROM node:alpine
+FROM  demydiuk/ewpe-smart-mqtt:latest
+
+#COPY qemu-arm-static /usr/bin
 
 WORKDIR /opt/ewpe-smart-mqtt
 COPY package*.json ./
